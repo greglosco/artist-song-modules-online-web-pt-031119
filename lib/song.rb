@@ -4,7 +4,7 @@ class Song
   attr_accessor :name
   attr_reader :artist
   
- extend Memorable::ClassMethods
+  
 
   @@songs = []
 
@@ -35,4 +35,7 @@ class Song
   def to_param
     name.downcase.gsub(' ', '-')
   end
+  
+  extend Memorable::ClassMethods
+  
 end
